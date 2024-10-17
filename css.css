@@ -71,11 +71,6 @@
   width: 50%;
 }
 
-.image12 {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 
 .text12 {
@@ -120,6 +115,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  object-fit: scale-down;
   }
 }
 
@@ -130,6 +126,17 @@
 
   }
 }
+.sitename{
+    font-size: 35px;
+    font-weight: bold;
+}
+@media screen and (max-width: 800px) {
+  .sitename {
+    font-size: 10px;
+font-weight: bold;
+  }
+}
+
 .carousel {
   position: absolute;
   inset: 0;
@@ -145,6 +152,7 @@
   height: 500px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 #business img{
     transition: 0.3s;
 }
@@ -176,13 +184,21 @@ transform: none;
 
 .gallery-image {
     cursor: pointer;
+    max-width: 100%;
+    justify-content: start;
     transition: transform 0.2s;
 }
 
 .gallery-image:hover {
     transform: scale(1.05);
 }
-
+@media screen and (max-width: 800px) {
+  .gallery-image {
+    max-width: 100%;
+    justify-content: start;
+    align-items: center;
+  }
+}
 .modal {
     display: none;
     position: fixed;
@@ -350,6 +366,11 @@ margin: 10px;
     width: 50%;
     justify-content: center;
   }
+  .col-sm-3 video{
+    width: 50%;
+    flex: 25%;
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 800px) {
   .col-lg-4 {
@@ -357,14 +378,19 @@ margin: 10px;
     justify-content: center;
   }
 }
-
+}
+@media screen and (max-width: 800px) {
+  .Education img{
+    width: 100%;
+    justify-content: center;
+  }
 }
 #memory{
 
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
-  .column {
+  .column{
     flex: 100%;
     max-width: 100%;
   }
